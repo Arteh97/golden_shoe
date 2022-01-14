@@ -80,11 +80,13 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
+          <Link to='/'>
           <Logo>Golden Shoe</Logo>
+          </Link>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
-          <Link exact path='/login'>
+          <Link to='/login'>
           <MenuItem>SIGN IN</MenuItem>
           </Link>
           <MenuItem>
