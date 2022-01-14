@@ -55,7 +55,7 @@ export const sliderItems = [
     },
     {
       id:4,
-      img:"https://m.media-amazon.com/images/I/61WBg7crTQL._AC_SR700,525_.jpg",
+      img:"https://bonprix.scene7.com/is/image/OttoUK/300w/Patent-Chelsea-Boots~907595FRSC.jpg",
     },
     {
       id:5,
