@@ -43,7 +43,7 @@ export const sliderItems = [
   export const popularProducts = [
     {
       id:1,
-      img:"https://images.pexels.com/photos/6046212/pexels-photo-6046212.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      img:"https://handcmediastorage.blob.core.windows.net/productimages/OE/OEPJB171-C01-154450-500px-650px.jpg",
     },
     {
       id:2,
@@ -51,7 +51,7 @@ export const sliderItems = [
     },
     {
       id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+      img:"https://images.vans.com/is/image/VansEU/VN0A3WMAVNE-HERO?$PDP-FULL-IMAGE$",
     },
     {
       id:4,
@@ -59,18 +59,18 @@ export const sliderItems = [
     },
     {
       id:5,
-      img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEQB8IwlSkEKkz8KvA7CuHhPCs7eRHC2PPIg&usqp=CAU",
     },
     {
       id:6,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+      img:"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/qwqfyddzikcgc4ozwigp/revolution-5-road-running-shoes-szF7CS.png",
     },
     {
       id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+      img:"https://www.charlies.co.uk/media/catalog/product/cache/34679f27fbdb35ef620390feb2b51d9b/l/u/lunar-dixi-trainer-pewter.jpg",
     },
     {
       id:8,
-      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+      img:"https://pyxis.nymag.com/v1/imgs/35a/917/85053757d61548307fa2643146675f5f6b.rsquare.w600.jpg",
     },
   ]
