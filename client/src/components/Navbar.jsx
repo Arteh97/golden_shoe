@@ -3,6 +3,7 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   height: 60px;
@@ -83,7 +84,9 @@ const Navbar = () => {
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
+          <Link exact path='/login'>
           <MenuItem>SIGN IN</MenuItem>
+          </Link>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
