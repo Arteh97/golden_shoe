@@ -1,13 +1,21 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
-mongoose
-	.connect(
-		'mongodb+srv://Arteh:2BothamClose!@golden-shoe.d5une.mongodb.net/golden-shoe?retryWrites=true&w=majority'
-	)
-	.then(() => console.log('Database connection successful'));
+dotenv.config();
 
-app.listen(5001, () => {
+mongoose
+	.connect(process.env.MONGO_URL)
+	.then(() => console.log('Database connection successful'))
+	.catch(err => {
+		console.log(err);
+	});
+
+app.get('/api/test', () => {
+	console.log('test is successful');
+});
+
+app.listen(process.env.PORT || 5001, () => {
 	console.log('Backend server is running!');
 });
