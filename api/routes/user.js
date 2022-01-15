@@ -1,4 +1,4 @@
-const { verifyToken } = require('./verifyToken');
+const { verifyToken, verifyTokenAndAuthorization } = require('./verifyToken');
 
 const userRouter = require('express').Router();
 
@@ -7,11 +7,11 @@ userRouter.get('/usertest', (req, res) => {
 });
 
 userRouter.post('/userposttest', (req, res) => {
-	const username = req.bodu.username;
+	const username = req.body.username;
 	res.status(200).send('your username is:' + username);
 });
 
-router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
+userRouter.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
 	if (req.body.password) {
 		req.body.password = CryptoJS.AES.encrypt(
 			req.body.password,
