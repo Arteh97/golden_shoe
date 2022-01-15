@@ -1,6 +1,9 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 
+const KEY =
+	'sk_test_51KICtZFaPJhHfCTETnqmUQrwcAh1c1kOcxKQoVefaAAAzi7fxpkaDjKyVBtMrpIimgY5mlrXlM5ubrMo5uqiif2r00UM1jq6ac';
+
 const Pay = () => {
 	return (
 		<div
@@ -11,7 +14,12 @@ const Pay = () => {
 				justifyContent: 'center',
 			}}
 		>
-			<StripeCheckout name='Golden shoe'>
+			<StripeCheckout
+				name='Golden shoe'
+				billingAddress
+				shippingAddress
+				description='Your total is $75'
+			>
 				<button
 					style={{
 						border: 'none',
