@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductList from './pages/ProductList';
 import Product from './components/Product';
+import Pay from './pages/Pay';
+import Success from './pages/Success';
 
 function App() {
 	return (
@@ -12,17 +14,23 @@ function App() {
 				<Route exact path='/'>
 					<Home />
 				</Route>
-        <Route path='/products'>
-          <ProductList />
-        </Route>
-        <Route path='/products/category'>
-          <ProductList />
-        </Route>
-        <Route path='/products/:id'>
-          <Product />
-        </Route>
+				<Route path='/products'>
+					<ProductList />
+				</Route>
+				<Route path='/products/category'>
+					<ProductList />
+				</Route>
+				<Route path='/products/:id'>
+					<Product />
+				</Route>
 				<Route path='/login'>
 					<Login />
+				</Route>
+				<Route path='/pay'>
+					<Pay />
+				</Route>
+				<Route path='/success'>
+					<Success />
 				</Route>
 			</Switch>
 		</Router>
