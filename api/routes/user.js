@@ -1,10 +1,12 @@
-const router = require('express').router();
+const userRouter = require('express').Router();
 
-router.get('/usertest', (req, req) => {
+userRouter.get('/usertest', (req, res) => {
 	res.send('user test is successfull!');
 });
 
-router.post('/userposttest', (req, res) => {
+userRouter.post('/userposttest', (req, res) => {
 	const username = req.bodu.username;
-	res.send('your username is:' + username);
+	res.status(200).send('your username is:' + username);
 });
+
+module.exports = userRouter;

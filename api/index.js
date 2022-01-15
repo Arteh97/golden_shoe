@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const userRouter = require('./routes/user');
+const authRouter = require('./routes/auth');
 
 dotenv.config();
 
@@ -12,9 +14,11 @@ mongoose
 		console.log(err);
 	});
 
-app.get('/api/test', () => {
-	console.log('test is successful');
-});
+app.use(express.json());
+
+app.use('/api/auth', authRouter);
+
+app.use('/api/users', userRouter);
 
 app.listen(process.env.PORT || 5001, () => {
 	console.log('Backend server is running!');
