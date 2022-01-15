@@ -38,14 +38,11 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const ProductList = () => {
-	const location = useLocation();
-	console.log(location.pathname);
-
 	return (
 		<Container>
 			<Navbar />
 			<Announcement />
-			<Title>Dresses</Title>
+			<Title>Shoes</Title>
 			<FilterContainer>
 				<Filter>
 					<FilterText>Filter Products:</FilterText>
