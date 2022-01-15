@@ -197,10 +197,10 @@ const Cart = () => {
 						<Hr />
 						<Product>
 							<ProductDetail>
-								<Image src='https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png' />
+								<Image src='https://handcmediastorage.blob.core.windows.net/productimages/OE/OEPJB171-C01-154450-500px-650px.jpg' />
 								<Details>
 									<ProductName>
-										<b>Product:</b> HAKURA T-SHIRT
+										<b>Product:</b> MENS FORMAL SHOES
 									</ProductName>
 									<ProductId>
 										<b>ID:</b> 93813718293
@@ -217,7 +217,7 @@ const Cart = () => {
 									<ProductAmount>1</ProductAmount>
 									<Remove />
 								</ProductAmountContainer>
-								<ProductPrice>$ 20</ProductPrice>
+								<ProductPrice>£ 30</ProductPrice>
 							</PriceDetail>
 						</Product>
 					</Info>
