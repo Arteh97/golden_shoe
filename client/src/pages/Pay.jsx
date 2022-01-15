@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 const axios = require("axios");
+import { useHistory } from 'react-router';
 
 const KEY =
 	'pk_test_51KICtZFaPJhHfCTEtOVQ2Q1n5ZG8S3xi1yrOB7nz10nqTe6Rv0iwS6Wlj542qKf79EDfYyWuHmEeSkJA7EL7NRY300VyRM6c7L';
 
 const Pay = () => {
 	const [stripeToken, setStripeToken] = useState(null);
+    const history = useHistory();
 
 	const onToken = token => {
 		setStripeToken(token);
@@ -23,10 +25,11 @@ const Pay = () => {
 					}
 				);
 				console.log(res.data);
+                history.push("/success")
 			} catch (err) {
                 console.log(err)
             };
-            stripeToken && makeRequest
+            stripeToken && makeRequest();
 		}, [stripeToken]
 	});
 
@@ -39,7 +42,9 @@ const Pay = () => {
 				justifyContent: 'center',
 			}}
 		>
-			<StripeCheckout
+            {stripeToken ? (<span>Processing. please wait...</span>) :(
+
+                <StripeCheckout 
 				name='Golden shoe'
 				billingAddress
 				shippingAddress
@@ -47,20 +52,21 @@ const Pay = () => {
 				amount={7500}
 				token={onToken}
 				stripeKey={KEY}
-			>
+                >
 				<button
 					style={{
-						border: 'none',
+                        border: 'none',
 						width: 120,
 						borderRadius: 5,
 						padding: '20px',
 						backgroundColor: 'lightblue',
 						cursor: 'pointer',
 					}}
-				>
+                    >
 					Pay Now
 				</button>
 			</StripeCheckout>
+                )}
 		</div>
 	);
 };
