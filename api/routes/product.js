@@ -9,7 +9,7 @@ const productRouter = require('express').Router();
 
 //CREATE
 
-productRouter.post('/', verifyTokenAndAdmin, async (req, res) => {
+productRouter.post('/', async (req, res) => {
 	const newProduct = new Product(req.body);
 
 	try {
@@ -21,7 +21,7 @@ productRouter.post('/', verifyTokenAndAdmin, async (req, res) => {
 });
 
 //UPDATE
-productRouter.put('/:id', verifyTokenAndAdmin, async (req, res) => {
+productRouter.put('/:id', async (req, res) => {
 	try {
 		const updatedProduct = await Product.findByIdAndUpdate(
 			req.params.id,
