@@ -1,4 +1,5 @@
 import { Add, Remove } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
@@ -165,7 +166,9 @@ const Cart = () => {
 						<TopText>Shopping Bag(2)</TopText>
 						<TopText>Your Wishlist (0)</TopText>
 					</TopTexts>
-					<TopButton type='filled'>CHECKOUT NOW</TopButton>
+					<Link>
+						<TopButton type='filled'>CHECKOUT NOW</TopButton>
+					</Link>
 				</Top>
 				<Bottom>
 					<Info>
@@ -191,7 +194,7 @@ const Cart = () => {
 									<ProductAmount>2</ProductAmount>
 									<Remove />
 								</ProductAmountContainer>
-								<ProductPrice>$ 30</ProductPrice>
+								<ProductPrice>£ 30</ProductPrice>
 							</PriceDetail>
 						</Product>
 						<Hr />
@@ -225,21 +228,23 @@ const Cart = () => {
 						<SummaryTitle>ORDER SUMMARY</SummaryTitle>
 						<SummaryItem>
 							<SummaryItemText>Subtotal</SummaryItemText>
-							<SummaryItemPrice>$ 80</SummaryItemPrice>
+							<SummaryItemPrice>£ 60</SummaryItemPrice>
 						</SummaryItem>
 						<SummaryItem>
 							<SummaryItemText>Estimated Shipping</SummaryItemText>
-							<SummaryItemPrice>$ 5.90</SummaryItemPrice>
+							<SummaryItemPrice>£ 5.00</SummaryItemPrice>
 						</SummaryItem>
 						<SummaryItem>
 							<SummaryItemText>Shipping Discount</SummaryItemText>
-							<SummaryItemPrice>$ -5.90</SummaryItemPrice>
+							<SummaryItemPrice>£ -5.00</SummaryItemPrice>
 						</SummaryItem>
 						<SummaryItem type='total'>
 							<SummaryItemText>Total</SummaryItemText>
-							<SummaryItemPrice>$ 80</SummaryItemPrice>
+							<SummaryItemPrice>£ 60</SummaryItemPrice>
 						</SummaryItem>
-						<Button>CHECKOUT NOW</Button>
+						<Link to='/pay'>
+							<Button>CHECKOUT NOW</Button>
+						</Link>
 					</Summary>
 				</Bottom>
 			</Wrapper>
