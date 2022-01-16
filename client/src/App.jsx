@@ -16,10 +16,7 @@ function App() {
 				<Route exact path='/'>
 					<Home />
 				</Route>
-				<Route path='/products'>
-					<ProductList />
-				</Route>
-				<Route path='/products/category'>
+				<Route exact path='/products'>
 					<ProductList />
 				</Route>
 				<Route path='/products/:id'>
@@ -34,12 +31,12 @@ function App() {
 				<Route path='/cart'>
 					<Cart />
 				</Route>
-				{/* <Route path='/pay'>
+				<Route path='/pay'>
 					<Pay />
 				</Route>
 				<Route path='/success'>
 					<Success />
-				</Route> */}
+				</Route>
 			</Switch>
 		</Router>
 	);
