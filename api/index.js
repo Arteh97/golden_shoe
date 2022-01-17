@@ -6,6 +6,7 @@ const userRouter = require('./routes/user');
 const authRouter = require('./routes/auth');
 const productRouter = require('./routes/product');
 const cartRouter = require('./routes/cart');
+const cors = require('cors');
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ mongoose
 		console.log(err);
 	});
 
-// app.use(cors);
+app.use(cors);
 app.use(express.json());
 app.get('/api', (req, res) => {
 	res.status(200).send('api router working');
