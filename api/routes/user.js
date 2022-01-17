@@ -3,7 +3,7 @@ const { verifyToken, verifyTokenAndAuthorization } = require('./verifyToken');
 const userRouter = require('express').Router();
 
 userRouter.get('/usertest', (req, res) => {
-	res.send('user test is successfull!');
+	res.status(200).send('user test is successfull!');
 });
 
 userRouter.post('/userposttest', (req, res) => {
