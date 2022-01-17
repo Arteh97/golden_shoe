@@ -6,19 +6,22 @@ const userRouter = require('./routes/user');
 const authRouter = require('./routes/auth');
 const productRouter = require('./routes/product');
 const cartRouter = require('./routes/cart');
-const cors = require('cors');
 
 dotenv.config();
 
 mongoose
 	.connect(process.env.MONGO_URL)
 	.then(() => console.log('Database connection successful'))
+
 	.catch(err => {
 		console.log(err);
 	});
 
-app.use(cors);
+// app.use(cors);
 app.use(express.json());
+app.get('/api', (req, res) => {
+	res.status(200).send('api router working');
+});
 app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
